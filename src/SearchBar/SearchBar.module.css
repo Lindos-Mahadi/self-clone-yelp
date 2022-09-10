@@ -7,6 +7,6 @@
     border-radius: 0 !important;
 }
 
-:global(.icon) {
+:global(.icon).search-icon {
     color: white;
 }

@@ -18,7 +18,7 @@ export function SearchBar() {
                     <button className="button is-medium is-dark">Near</button>
                 </p>
                 <div className={`button is-medium ${styles['search-button']}`}>
-                    <span className="icon is-small "><i className="fa fa-search"></i></span>
+                    <span className={`icon is-small ${styles['search-icon']}`}><i className="fa fa-search"></i></span>
                 </div>
             </div>
         </div>
