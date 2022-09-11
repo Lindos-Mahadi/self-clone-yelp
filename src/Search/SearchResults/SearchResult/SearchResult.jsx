@@ -1,7 +1,7 @@
 
 import React from 'react';
 import styles from './SearchResult.module.css';
-// import { BusinessRating } from '../../../BusinessRating/BusinessRating';
+import { BusinessRating } from '../../../BusinessRating/BusinessRating';
 
 export function SearchResult() {
     return (
@@ -9,7 +9,7 @@ export function SearchResult() {
             <img src='https://via.placeholder.com/210' alt='business' className={styles['business-image']}/>
             <div className={styles['business-info']}>
                 <h2 className="subtitle">Burger Place</h2>
-                {/* <BusinessRating/> */}
+                <BusinessRating/>
                 <p>$$ <span class="tag">Burgers</span> <span class="tag">Fast Food</span></p>
             </div>
             <div className={styles['contact-info']}>
