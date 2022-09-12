@@ -20,7 +20,8 @@ export function SearchBar(props) {
         <form onSubmit={submit}>
             <div className="field has-addons">
                 <p className="control">
-                    <input className={`input  ${sizeClass} ${styles['input-control']}`} 
+                    <input className={`input  ${sizeClass} ${styles['input-control']}`}
+                    value={term}
                     onChange={(e)=>setTerm(e.target.value)}
                     type="text" 
                     placeholder="tacos, cheap dinner, Max's" />
@@ -29,7 +30,8 @@ export function SearchBar(props) {
                     <button className={`button is-dark  ${sizeClass}`}>Search</button>
                 </div>
                 <p className="control">
-                    <input className={`input ${sizeClass} ${styles['input-control']}`} 
+                    <input className={`input ${sizeClass} ${styles['input-control']}`}
+                    value={location} 
                     onChange={(e)=>setLocation(e.target.value)}
                     type="text" 
                     placeholder="address, neighborhood, city, state or zip" />

@@ -1,16 +1,23 @@
 import React from 'react';
-import { NavBar } from '../NavBar/Navbar';
+import { useHistory } from 'react-router-dom';
+import { NavBar } from '../NavBar/NavBar';
 import { SubNav } from '../NavBar/SubNav/SubNav';
 import { SearchResults } from './SearchResults/SearchResults';
 import {SearchResultsSummary} from './SearchResultsSummary/SearchResultsSummary';
 
 export function Search() {
+
+    const {location} = useHistory();
+    const params = new URLSearchParams(location.search);
+    const term = params.get('find_desc');
+    const locationParam = params.get('find_loc');
+
     return (
         <div>
-            <NavBar />
+            <NavBar term={term} location={locationParam} />
             <SubNav />
             {/* <SearchResultsSummary term='burgers' location='berlin'/> */}
-            <SearchResultsSummary />
+            <SearchResultsSummary term={term} location={locationParam} />
             <SearchResults />
         </div>
     );
